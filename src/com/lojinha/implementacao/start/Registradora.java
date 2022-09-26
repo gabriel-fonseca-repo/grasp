@@ -7,7 +7,6 @@ import com.lojinha.implementacao.vo.VendaVo;
 import java.util.Scanner;
 
 public class Registradora {
-
     public static void main(String[] args) {
         VendaVo vendaVo = VendaCreator.getInstance().criarNovaVenda();
         Scanner sc = new Scanner(System.in);

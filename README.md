@@ -62,15 +62,14 @@ public class FormaPagamento {
 
 ```java
 public class GuiVenda {
-
     public static void inciarAtendimento(VendaVo vendaVo, Scanner sc) {
         System.out.println("Olá! Seja bem vindo a lojinha!");
         System.out.println("Escolha um item: ");
         VendaController.getInstance().iniciarProcessoAdicaoItem(vendaVo, sc);
+        System.out.println("Escolha uma forma de pagamento: ");
         VendaController.getInstance().iniciarProcessoEscolhaFormaPagamento(vendaVo, sc);
         VendaController.getInstance().iniciarProcessoFinalizarVenda(vendaVo, sc);
     }
-
 }
 ```
 
@@ -182,35 +181,40 @@ public class Registradora {
 # Exemplo de um atendimento:
 
 ```java
-Olá!Seja bem vindo a lojinha!
+Olá! Seja bem vindo a lojinha!
 Escolha um item:
-1-Laranja
-2-Maçã
-3-Banana
-Para sair da seleção,digite qualquer valor não presente na lista
-2
-A quantidade:
-35
-1-Laranja
-2-Maçã
-3-Banana
-Para sair da seleção,digite qualquer valor não presente na lista
+1 - Laranja
+2 - Maçã
+3 - Banana
+Para sair da seleção, digite qualquer valor não presente na lista
 3
 A quantidade:
-25
-1-Laranja
-2-Maçã
-3-Banana
-Para sair da seleção,digite qualquer valor não presente na lista
-5
-1-Crédito
-2-Débito
+50
+1 - Laranja
+2 - Maçã
+3 - Banana
+Para sair da seleção, digite qualquer valor não presente na lista
 2
-Sua venda deu um total de:R$ 56
+A quantidade:
+34
+1 - Laranja
+2 - Maçã
+3 - Banana
+Para sair da seleção, digite qualquer valor não presente na lista
+4
+Escolha uma forma de pagamento:
+1 - Crédito
+2 - Débito
+3
+Forma de pagamento invalida!
+1 - Crédito
+2 - Débito
+1
+Sua venda deu um total de: R$ 56
 Os itens selecionados e a quantidade foram:
-Maçã-35
-Banana-25
-E a forma de pagamento escolhida foi:Débito
+Banana - 50
+Maçã - 34
+E a forma de pagamento escolhida foi: Crédito
 ```
 
 # Classe responsável por simular conexão com um banco de dados:

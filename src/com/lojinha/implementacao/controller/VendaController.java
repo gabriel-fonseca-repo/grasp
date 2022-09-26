@@ -71,11 +71,9 @@ public class VendaController {
     public void iniciarProcessoEscolhaFormaPagamento(VendaVo vendaVo, Scanner sc) {
         List<FormaPagamento> formasPagamento = DbConnection.getFormasPagamento();
         HashMap<String, FormaPagamento> mapParaSelecionar = new HashMap<>();
-
         for (FormaPagamento formaPagamento : formasPagamento) {
             mapParaSelecionar.put(formaPagamento.getId().toString(), formaPagamento);
         }
-
         while (true) {
             for (FormaPagamento formaPagamento : formasPagamento) {
                 System.out.println(formaPagamento.getId() + " - " + formaPagamento.getDescricao());
