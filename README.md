@@ -258,20 +258,6 @@ public class DbConnection {
         formasPagamento.add(formaPagamento);
     }
 
-    public static ArrayList<ProdutoVo> getItensDisponiveis() {
-        return itensDisponiveis;
-    }
-
-    public static void setItensDisponiveis(ArrayList<ProdutoVo> itensDisponiveis) {
-        DbConnection.itensDisponiveis = itensDisponiveis;
-    }
-
-    public static ArrayList<FormaPagamento> getFormasPagamento() {
-        return formasPagamento;
-    }
-
-    public static void setFormasPagamento(ArrayList<FormaPagamento> formasPagamento) {
-        DbConnection.formasPagamento = formasPagamento;
-    }
+    /*Getters e Setters*/
 }
 ```
