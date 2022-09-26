@@ -1,26 +1,40 @@
 package com.lojinha.implementacao.vo;
 
-import java.util.HashMap;
+import com.lojinha.implementacao.expert.FormaPagamento;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 public class VendaVo {
 
-    private HashMap<String, ProdutoVo> produtos;
+    private List<ProdutoVendaVo> produtos;
 
-    private HashMap<String, Integer> quantidade;
+    private BigDecimal total;
 
-    public HashMap<String, Integer> getQuantidade() {
-        return quantidade;
-    }
+    private FormaPagamento formaPagamento;
 
-    public void setQuantidade(HashMap<String, Integer> quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public HashMap<String, ProdutoVo> getProdutos() {
+    public List<ProdutoVendaVo> getProdutos() {
         return produtos;
     }
 
-    public void setProdutos(HashMap<String, ProdutoVo> produtos) {
+    public void setProdutos(List<ProdutoVendaVo> produtos) {
         this.produtos = produtos;
     }
+
+    public BigDecimal getTotal() {
+        return total;
+    }
+
+    public void setTotal(BigDecimal total) {
+        this.total = total;
+    }
+
+    public FormaPagamento getFormaPagamento() {
+        return formaPagamento;
+    }
+
+    public void setFormaPagamento(FormaPagamento formaPagamento) {
+        this.formaPagamento = formaPagamento;
+    }
 }
+
